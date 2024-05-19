@@ -1,0 +1,214 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "disk",
+    "tray",
+    "custom/cpu_usage",
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+
+  "modules-right": [
+    "battery",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "network",
+    "custom/weather",
+    "clock",
+    "custom/power",
+  ],
+
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "wofi --show drun",
+    "on-click-right": "killall wofi",
+    "tooltip": false,
+  },
+
+  "cava": {
+//    "framerate": 60,
+//    "autosens": 1,
+//    "bars": 12,
+//    "lower_cutoff_freq": 50,
+//    "higher_cutoff_freq": 10000,
+//    "method": pulse,
+//    "source": suto,
+//    "stereo": true,
+//    "reverse": false,
+//    "bar_delimiter": 0,
+//    "monstercat": false,
+//    "waves": false,
+//    "noise_reduction": 0.77,
+//    "input_delay": 2,
+//    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+//    "actions": {
+//      "on-click-right": "mode"
+//    },
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "tooltip": false,
+  },
+
+//  "custom/cpu_usage": {
+//    "return-type": "json",
+//    "format": " {}%",
+//    "exec": "~/.config/waybar/cpu.sh",
+//    "interval": 10,
+//    "tooltip-format": "{}",
+//    "tooltip": true,
+//  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {percentage}%",
+    "tooltip-format": "{used:0.1f}G/{total:0.1f}G",
+    "tooltip": true,
+  },
+
+  "disk": {
+    "interval": 60,
+    "path": "/",
+    "format": " {percentage_free}%",
+    "tooltip-format": "{free}",
+    "tooltip": true,
+  },
+
+  "tray": {
+    "icon-size": 10,
+    "tooltip": false,
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "urgent": " ",
+      "active": " ",
+      "default": " ",
+    },
+    "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": [],
+      },
+  },
+
+"battery": {
+    "interval": 60,
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon}󱐋 {capacity}%",
+    "format-plugged": "{icon} {capacity}%",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹",
+    ],
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "tooltip": true,
+    "tooltip-format": "{timeTo}",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂯 {volume}%",
+    "format-muted": "󰖁 {volume}%",
+    "format-icons": [
+      "󰕿",
+      "󰖀",
+      "󰕾",
+    ],
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "max-volume": 150,
+    "tooltip": true,
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭 {volume}%",
+    "scroll-step": 0,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+    "max-volume": 150,
+    "tooltip": true,
+  },
+
+  "network": {
+    "interval": 30,
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 Wired",
+    "fomat-disconnected": "󱚵 Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty nmtui",
+  },
+
+  "custom/weather": {
+    "format": "{} °",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar",
+    "return-type": "json"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}  ",
+    "format-alt": "{:%d %B} 󰃭 ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"          : "month",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+        "months":     "<span color='#ffead3'><b>{}</b></span>",
+        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+        "today":      "<span color='#ff6699'><b>{}</b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_down",
+      "on-scroll-down": "shift_up"
+    }
+  },
+
+  "custom/power": {
+    "format": "󰐥",
+    "tooltip": false,
+  },
+}
