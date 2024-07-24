@@ -10,7 +10,7 @@ right_format = """$all"""
 command_timeout = 1000
 
 [git_branch]
-format =  'on [$symbol$branch(:$remote_branch)]($style)'
+format =  'on [$symbol$branch (:$remote_branch)]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
