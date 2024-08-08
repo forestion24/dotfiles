@@ -6,6 +6,12 @@ source ~/.config/fish/alias.fish
 
 set -U fish_greeting
 
+abbr --add gco git checkout
+abbr --add gcm git commit
+abbr --add gl git log --oneline --graph --color --all --decorate
+abbr --add gp git push
+abbr --add ga git add
+
 # Fish syntax highlighting
 set -g fish_color_autosuggestion '555'  'brblack'
 set -g fish_color_cancel -r
