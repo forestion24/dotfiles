@@ -173,7 +173,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty nmtui",
+    "on-click": "kitty --class=nmtui nmtui",
   },
 
   "custom/weather": {
