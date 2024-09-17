@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 source ~/.config/fish/alias.fish
+source ~/.config/fish/script.fish
 
 set -U fish_greeting
 
