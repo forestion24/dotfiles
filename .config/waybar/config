@@ -181,7 +181,7 @@
     "format": "{} °",
     "tooltip": true,
     "interval": 3600,
-    "exec": "wttrbar",
+    "exec": "wttrbar --location Warsaw --date-format '%d/%b/%Y'",
     "return-type": "json"
   },
 
