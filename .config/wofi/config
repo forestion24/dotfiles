@@ -1,0 +1,10 @@
+allow_images = true
+image_size = 20
+prompt = 
+orientation = vertical
+insensitive = true
+columns = 1
+hide_scroll = true
+show = drun
+width = 600
+normal_window = true

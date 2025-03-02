@@ -114,7 +114,7 @@
 "battery": {
     "interval": 60,
     "format": "{icon} {capacity}%",
-    "format-plugged": "{icon}󱐋 {capacity}%",
+    "format-charging": "{icon}󱐋 {capacity}%",
     "format-icons": [
       "󰂎",
       "󰁺",

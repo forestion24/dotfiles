@@ -57,7 +57,7 @@ window#waybar.hidden {
 #tray {
   border-radius: 4px;
   margin: 6px 3px;
-  padding: 6px 12px;
+  padding: 6px 10px;
   background-color: #1e1e2e;
   color: #181825;
 }
@@ -68,13 +68,12 @@ window#waybar.hidden {
   color: #cdd6f4;
   border-radius: 4px;
   margin: 6px 3px;
-  padding: 6px 12px;
+  padding: 6px 10px;
   background-color: #1e1e2e;
 }
 
 #custom-launcher {
   border-radius: 4px;
-  font-size: 16px;
   margin: 6px 3px 6px 3px;
   padding: 4px 1px 4px 6px;
   background-position: center;
