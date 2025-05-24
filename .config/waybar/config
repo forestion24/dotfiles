@@ -173,7 +173,7 @@
     "tooltip-format-wifi": "󰇚 {bandwidthDownBits}  󰕒 {bandwidthUpBits} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty --class=nmtui nmtui",
+    "on-click": "kitty --class=nmtui nmtui connect",
   },
 
   "custom/weather": {
