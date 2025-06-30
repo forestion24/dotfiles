@@ -27,7 +27,7 @@
   ],
 
   "custom/launcher": {
-    "format": " ",
+    "format": "",
     "on-click": "wofi --show drun",
     "on-click-right": "killall wofi",
     "tooltip": false,
@@ -132,6 +132,7 @@
       "warning": 30,
       "critical": 15,
     },
+    "on-click": "better-control --battery",
     "tooltip": true,
     "tooltip-format": "{timeTo}",
   },
@@ -146,7 +147,7 @@
       "󰕾",
     ],
     "scroll-step": 5,
-    "on-click": "pavucontrol",
+    "on-click": "better-control --volume",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "max-volume": 150,
     "tooltip": true,
@@ -157,7 +158,7 @@
     "format-source": "󰍬 {volume}%",
     "format-source-muted": "󰍭 {volume}%",
     "scroll-step": 0,
-    "on-click": "pavucontrol",
+    "on-click": "better-control --volume",
     "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
     "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
@@ -173,8 +174,10 @@
     "tooltip-format-wifi": "󰇚 {bandwidthDownBits}  󰕒 {bandwidthUpBits} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty --class=nmtui nmtui connect",
+    "on-click": "~/scripts/network-manager",
   },
+
+// "on-click": "kitty --class=nmtui nmtui connect",
 
   "custom/weather": {
     "format": "{} °",

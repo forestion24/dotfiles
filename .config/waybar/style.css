@@ -75,7 +75,7 @@ window#waybar.hidden {
 #custom-launcher {
   border-radius: 4px;
   margin: 6px 3px 6px 3px;
-  padding: 4px 1px 4px 6px;
+  padding: 4px 12px 4px 8px;
   background-position: center;
   color: #89DCEB;
   background-color: #1e1e2e;
