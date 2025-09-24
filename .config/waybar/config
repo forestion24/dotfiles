@@ -174,7 +174,7 @@
     "tooltip-format-wifi": "󰇚 {bandwidthDownBits}  󰕒 {bandwidthUpBits} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "~/scripts/network-manager",
+    "on-click": "~/scripts/network-manager.sh",
   },
 
 // "on-click": "kitty --class=nmtui nmtui connect",
@@ -183,7 +183,7 @@
     "format": "{} °",
     "tooltip": true,
     "interval": 3600,
-    "exec": "wttrbar --location Warsaw --date-format '%d/%b/%Y'",
+    "exec": "wttrbar --location Espoo --date-format '%d/%b/%Y'",
     "return-type": "json"
   },
 

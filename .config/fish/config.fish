@@ -39,3 +39,5 @@ set -g fish_color_valid_path --underline
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 thefuck --alias | source
 starship init fish | source
+
+set -gx EDITOR nvim
