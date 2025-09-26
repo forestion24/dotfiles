@@ -208,7 +208,7 @@ main_menu() {
     if [[ "$wifi_status" =~ "enabled" ]]; then
         wifi_toggle="󱛅  Disable Wi-Fi"
         wifi_toggle_command="off"
-        manage_wifi_btn="\n󱓥 Manage Wi-Fi"
+        manage_wifi_btn="󱓥 Manage Wi-Fi"
     else
         wifi_toggle="󱚽  Enable Wi-Fi"
         wifi_toggle_command="on"
@@ -217,7 +217,7 @@ main_menu() {
 
     ##==> display the wofi menu
     #######################################################
-    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | wofi -dmenu -p " Network Management: ")
+    local chosen_option=$(echo -e "$manage_wifi_btn\n󱓥 Manage Ethernet\n$wifi_toggle" | wofi -dmenu -p " Network Management: ")
     case $chosen_option in
         "󱓥 Manage Wi-Fi")
             manage_wifi
