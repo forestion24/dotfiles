@@ -6,3 +6,5 @@ alias gitree='git log --oneline --graph --color --all --decorate'
 
 alias nets='nmcli d w'
 alias wific='nmcli d w c'
+
+alias search='rg --line-number --no-heading --color=always "" | fzf --ansi --phony --bind "change:reload:rg --line-number --no-heading --color=always {q} || true"'

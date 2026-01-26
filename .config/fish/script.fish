@@ -33,6 +33,24 @@ function run
     end
 end
 
+function searchf
+    set -l dir .
+    if test (count $argv) -ge 1
+        set dir $argv[1]
+    end
+
+    fd . $dir \
+    | fzf --preview 'fish -c "
+        if test -d {}
+            echo (set_color cyan)\"📁 Directory\"(set_color normal)
+            eza --tree --level=1 --icons --color=always {} 
+        else
+            bat --style=numbers --color=always --line-range :300 {}
+        end
+    "' --preview-window=right:60%
+end
+
+
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"
