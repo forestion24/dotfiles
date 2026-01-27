@@ -12,6 +12,9 @@ abbr --add gcm git commit
 abbr --add gl git log --oneline --graph --color --all --decorate
 abbr --add gp git push
 abbr --add ga git add
+addr --add gd git -c diff.external=difft diff
+
+bind ctrl-f 'fuck' repaint
 
 # Fish syntax highlighting
 set -g fish_color_autosuggestion '555'  'brblack'
